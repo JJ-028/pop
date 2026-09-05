@@ -1,0 +1,397 @@
+/* ===== Star Wars — DM NSI — Charlie Duthoit ===== */
+/* Palette : anthracite spatial + or sabre-laser + touche acier */
+
+:root {
+	--bg: #14161c;
+	--panel: #1d2028;
+	--panel-alt: #23262f;
+	--text: #e9e6da;
+	--text-muted: #a7a598;
+	--gold: #d9a441;
+	--steel: #7fa4c2;
+	--sith: #8a3327;
+	--border: #33364066;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: "Literata", Georgia, "Times New Roman", serif;
+	font-size: 16px;
+	line-height: 1.65;
+	text-align: left;
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 0 20px 60px;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Oswald", "Trebuchet MS", sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	line-height: 1.2;
+}
+
+h1 {
+	text-transform: none;
+	font-size: 2.6rem;
+	color: var(--text);
+	text-align: center;
+	margin: 0.4em 0 0.2em;
+}
+
+h2 {
+	color: var(--gold);
+	font-size: 1.6rem;
+	margin-top: 2.2em;
+	padding-top: 0.6em;
+	border-top: 1px solid var(--border);
+}
+
+h3 {
+	color: var(--steel);
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-decoration: none;
+	margin-top: 1.6em;
+}
+
+h4 {
+	color: var(--steel);
+	font-size: 1.05rem;
+	margin-top: 1.4em;
+}
+
+p {
+	text-align: left;
+	max-width: 68ch;
+	color: var(--text);
+}
+
+p em {
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+/* ----- header / nav ----- */
+
+header {
+	padding: 28px 0 12px;
+	text-align: center;
+}
+
+header > img {
+	max-width: 160px;
+	margin: 0 auto 10px;
+	display: block;
+}
+
+nav {
+	margin-top: 18px;
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	gap: 4px;
+	margin: 0;
+	padding: 8px 0;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--text-muted);
+	font-family: "Oswald", sans-serif;
+	font-size: 0.85rem;
+	letter-spacing: 0.02em;
+	padding: 6px 12px;
+	border-radius: 3px;
+	transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+nav a:hover {
+	color: var(--gold);
+	background-color: var(--panel-alt);
+}
+
+/* ----- images ----- */
+
+img {
+	max-width: 100%;
+	display: block;
+	margin: 18px auto;
+	border: 1px solid var(--border);
+	background: var(--panel);
+	padding: 6px;
+}
+
+/* ----- tables ----- */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 18px 0 28px;
+	font-size: 0.92rem;
+}
+
+th, td {
+	border: 1px solid var(--border);
+	padding: 10px 12px;
+	text-align: left;
+}
+
+th {
+	background: var(--panel-alt);
+	color: var(--gold);
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	font-size: 0.85rem;
+	letter-spacing: 0.03em;
+}
+
+td {
+	background: var(--panel);
+	color: var(--text);
+}
+
+tr:nth-child(even) td {
+	background: var(--panel-alt);
+}
+
+/* ----- liens ----- */
+
+a {
+	color: var(--steel);
+	text-decoration: none;
+	font-weight: 600;
+	border-bottom: 1px solid transparent;
+}
+
+a:hover {
+	color: var(--gold);
+	border-bottom-color: var(--gold);
+}
+
+/* ----- section "sommaire" (pageweb2) ----- */
+
+.som {
+	display: block;
+	background: var(--panel);
+	border: 1px solid var(--border);
+	padding: 4px 20px;
+	margin: 20px 0;
+}
+
+.som nav {
+	border: none;
+}
+
+.som ul {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+}
+
+/* ----- footer ----- */
+
+footer {
+	margin-top: 50px;
+	padding-top: 16px;
+	border-top: 1px solid var(--border);
+	color: var(--text-muted);
+	font-size: 0.85rem;
+	text-align: center;
+}
+
+/* ----- accessibilité ----- */
+
+a:focus-visible, nav a:focus-visible {
+	outline: 2px solid var(--gold);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+	}
+}
+
+
+/* ----- fond étoilé ----- */
+
+body {
+	background-image:
+		radial-gradient(0.6px 0.6px at 654px 114px, rgba(255,255,255,0.46), transparent 1.2px),
+		radial-gradient(1.1px 1.1px at 228px 142px, rgba(255,255,255,0.62), transparent 2.2px),
+		radial-gradient(1.0px 1.0px at 558px 89px, rgba(255,255,255,0.36), transparent 2.0px),
+		radial-gradient(0.8px 0.8px at 95px 223px, rgba(255,255,255,0.59), transparent 1.6px),
+		radial-gradient(1.1px 1.1px at 574px 203px, rgba(255,255,255,0.63), transparent 2.2px),
+		radial-gradient(0.9px 0.9px at 429px 225px, rgba(255,255,255,0.46), transparent 1.8px),
+		radial-gradient(1.1px 1.1px at 6px 163px, rgba(255,255,255,0.49), transparent 2.2px),
+		radial-gradient(1.3px 1.3px at 159px 220px, rgba(255,255,255,0.48), transparent 2.6px),
+		radial-gradient(0.7px 0.7px at 94px 389px, rgba(255,255,255,0.69), transparent 1.4px),
+		radial-gradient(1.2px 1.2px at 618px 270px, rgba(255,255,255,0.64), transparent 2.4px),
+		radial-gradient(1.3px 1.3px at 549px 127px, rgba(255,255,255,0.5), transparent 2.6px),
+		radial-gradient(1.2px 1.2px at 565px 300px, rgba(255,255,255,0.6), transparent 2.4px),
+		radial-gradient(0.7px 0.7px at 370px 591px, rgba(255,255,255,0.38), transparent 1.4px),
+		radial-gradient(1.1px 1.1px at 677px 233px, rgba(255,255,255,0.74), transparent 2.2px),
+		radial-gradient(0.9px 0.9px at 238px 103px, rgba(255,255,255,0.53), transparent 1.8px),
+		radial-gradient(0.9px 0.9px at 373px 166px, rgba(255,255,255,0.43), transparent 1.8px),
+		radial-gradient(1.1px 1.1px at 273px 699px, rgba(255,255,255,0.59), transparent 2.2px),
+		radial-gradient(1.1px 1.1px at 175px 546px, rgba(255,255,255,0.42), transparent 2.2px),
+		radial-gradient(1.3px 1.3px at 388px 276px, rgba(255,255,255,0.61), transparent 2.6px),
+		radial-gradient(1.1px 1.1px at 570px 224px, rgba(255,255,255,0.69), transparent 2.2px),
+		radial-gradient(1.2px 1.2px at 57px 234px, rgba(255,255,255,0.67), transparent 2.4px),
+		radial-gradient(0.6px 0.6px at 410px 274px, rgba(255,255,255,0.72), transparent 1.2px),
+		radial-gradient(0.7px 0.7px at 580px 322px, rgba(255,255,255,0.55), transparent 1.4px),
+		radial-gradient(0.7px 0.7px at 658px 469px, rgba(255,255,255,0.41), transparent 1.4px),
+		radial-gradient(0.8px 0.8px at 574px 551px, rgba(255,255,255,0.58), transparent 1.6px),
+		radial-gradient(0.9px 0.9px at 597px 408px, rgba(255,255,255,0.75), transparent 1.8px),
+		radial-gradient(0.9px 0.9px at 141px 521px, rgba(255,255,255,0.65), transparent 1.8px),
+		radial-gradient(1.0px 1.0px at 112px 156px, rgba(255,255,255,0.67), transparent 2.0px),
+		radial-gradient(0.6px 0.6px at 432px 610px, rgba(255,255,255,0.5), transparent 1.2px),
+		radial-gradient(0.8px 0.8px at 479px 541px, rgba(255,255,255,0.57), transparent 1.6px),
+		radial-gradient(1.1px 1.1px at 11px 696px, rgba(255,255,255,0.62), transparent 2.2px),
+		radial-gradient(1.1px 1.1px at 549px 273px, rgba(255,255,255,0.49), transparent 2.2px),
+		radial-gradient(0.7px 0.7px at 300px 445px, rgba(255,255,255,0.35), transparent 1.4px),
+		radial-gradient(1.1px 1.1px at 269px 512px, rgba(255,255,255,0.55), transparent 2.2px),
+		radial-gradient(0.8px 0.8px at 108px 640px, rgba(255,255,255,0.61), transparent 1.6px),
+		radial-gradient(0.7px 0.7px at 623px 203px, rgba(255,255,255,0.66), transparent 1.4px),
+		radial-gradient(1.2px 1.2px at 552px 543px, rgba(255,255,255,0.59), transparent 2.4px),
+		radial-gradient(0.7px 0.7px at 500px 19px, rgba(255,255,255,0.5), transparent 1.4px),
+		radial-gradient(0.6px 0.6px at 314px 245px, rgba(255,255,255,0.7), transparent 1.2px),
+		radial-gradient(1.1px 1.1px at 80px 87px, rgba(255,255,255,0.68), transparent 2.2px),
+		radial-gradient(0.7px 0.7px at 545px 128px, rgba(255,255,255,0.54), transparent 1.4px),
+		radial-gradient(0.8px 0.8px at 562px 169px, rgba(255,255,255,0.7), transparent 1.6px),
+		radial-gradient(1.3px 1.3px at 433px 216px, rgba(255,255,255,0.65), transparent 2.6px),
+		radial-gradient(0.9px 0.9px at 205px 319px, rgba(255,255,255,0.62), transparent 1.8px),
+		radial-gradient(1.2px 1.2px at 382px 448px, rgba(255,255,255,0.53), transparent 2.4px),
+		radial-gradient(0.6px 0.6px at 253px 230px, rgba(255,255,255,0.36), transparent 1.2px),
+		radial-gradient(1.0px 1.0px at 567px 235px, rgba(255,255,255,0.35), transparent 2.0px),
+		radial-gradient(0.8px 0.8px at 646px 60px, rgba(255,255,255,0.71), transparent 1.6px),
+		radial-gradient(1.0px 1.0px at 338px 72px, rgba(255,255,255,0.46), transparent 2.0px),
+		radial-gradient(1.0px 1.0px at 497px 219px, rgba(255,255,255,0.64), transparent 2.0px),
+		radial-gradient(0.9px 0.9px at 584px 590px, rgba(255,255,255,0.66), transparent 1.8px),
+		radial-gradient(0.7px 0.7px at 416px 194px, rgba(255,255,255,0.61), transparent 1.4px),
+		radial-gradient(0.9px 0.9px at 362px 433px, rgba(255,255,255,0.7), transparent 1.8px),
+		radial-gradient(1.1px 1.1px at 55px 689px, rgba(255,255,255,0.61), transparent 2.2px),
+		radial-gradient(1.1px 1.1px at 62px 412px, rgba(255,255,255,0.67), transparent 2.2px),
+		radial-gradient(1.6px 1.6px at 111px 254px, rgba(255,255,255,0.76), transparent 3.2px),
+		radial-gradient(1.5px 1.5px at 143px 432px, rgba(255,255,255,0.74), transparent 3.0px),
+		radial-gradient(1.8px 1.8px at 895px 77px, rgba(255,255,255,0.89), transparent 3.6px),
+		radial-gradient(1.4px 1.4px at 563px 100px, rgba(255,255,255,0.95), transparent 2.8px),
+		radial-gradient(2.2px 2.2px at 856px 15px, rgba(255,255,255,0.92), transparent 4.4px),
+		radial-gradient(1.5px 1.5px at 869px 242px, rgba(255,255,255,0.74), transparent 3.0px),
+		radial-gradient(1.7px 1.7px at 218px 885px, rgba(255,255,255,0.57), transparent 3.4px),
+		radial-gradient(2.2px 2.2px at 388px 2px, rgba(255,255,255,0.66), transparent 4.4px),
+		radial-gradient(1.8px 1.8px at 802px 803px, rgba(255,255,255,0.72), transparent 3.6px),
+		radial-gradient(1.8px 1.8px at 748px 802px, rgba(255,255,255,0.84), transparent 3.6px),
+		radial-gradient(1.6px 1.6px at 158px 194px, rgba(255,255,255,0.94), transparent 3.2px),
+		radial-gradient(1.8px 1.8px at 593px 753px, rgba(255,255,255,0.85), transparent 3.6px),
+		radial-gradient(1.9px 1.9px at 58px 51px, rgba(255,255,255,0.75), transparent 3.8px),
+		radial-gradient(1.5px 1.5px at 873px 543px, rgba(255,255,255,0.93), transparent 3.0px),
+		radial-gradient(1.5px 1.5px at 82px 871px, rgba(255,255,255,0.79), transparent 3.0px),
+		radial-gradient(1.6px 1.6px at 691px 882px, rgba(255,255,255,0.6), transparent 3.2px),
+		radial-gradient(ellipse 900px 600px at 20% 0%, rgba(127,164,194,0.10), transparent 70%),
+		radial-gradient(ellipse 700px 500px at 100% 30%, rgba(217,164,65,0.06), transparent 70%);
+	background-repeat: repeat, repeat, no-repeat, no-repeat;
+	background-size: 700px 700px, 900px 900px, auto, auto;
+	background-position: 0 0, 0 0, 0 0, 0 0;
+	background-attachment: fixed, fixed, fixed, fixed;
+	animation: drift-stars 240s linear infinite;
+}
+
+@keyframes drift-stars {
+	from { background-position: 0 0, 0 0, 0 0, 0 0; }
+	to   { background-position: -700px 700px, 900px -900px, 0 0, 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		animation: none;
+	}
+}
+
+/* ----- mobile ----- */
+
+@media (max-width: 600px) {
+	body {
+		font-size: 15px;
+		padding: 0 14px 40px;
+	}
+
+	h1 {
+		font-size: 1.9rem;
+	}
+
+	h2 {
+		font-size: 1.35rem;
+	}
+
+	header {
+		padding: 20px 0 8px;
+	}
+
+	nav ul {
+		gap: 2px;
+	}
+
+	nav a {
+		font-size: 0.78rem;
+		padding: 6px 9px;
+	}
+
+	/* Les tableaux passent en cartes empilées : chaque ligne devient un bloc,
+	   chaque cellule affiche son intitulé de colonne devant sa valeur. */
+	table, thead, tbody, tr, th, td {
+		display: block;
+	}
+
+	table {
+		margin: 14px 0 22px;
+		border: 1px solid var(--border);
+	}
+
+	th {
+		display: none;
+	}
+
+	tr {
+		border-bottom: 2px solid var(--border);
+		padding: 8px 0;
+	}
+
+	tr:last-child {
+		border-bottom: none;
+	}
+
+	td {
+		border: none;
+		padding: 6px 12px;
+		background: transparent !important;
+	}
+
+	td::before {
+		content: attr(data-label);
+		display: block;
+		font-family: "Oswald", sans-serif;
+		font-size: 0.72rem;
+		letter-spacing: 0.03em;
+		color: var(--gold);
+		margin-bottom: 2px;
+	}
+
+	img {
+		padding: 4px;
+	}
+}
